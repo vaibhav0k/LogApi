@@ -34,7 +34,7 @@ public class DataHandlerFactory
                 var MongoConnectionString = _configuration.GetConnectionString("MongoConnection");
                 return new DataHandlerMongo(MongoConnectionString);
             case "Mysql":
-                var MysqlConnectionString = _configuration.GetConnectionString("MysqlConnection");
+                var MysqlConnectionString = _configuration.GetConnectionString("MYSQLCONNSTR_localdb");
                 return new DataHandlerMysql(MysqlConnectionString);
             default:
                 throw new ArgumentException("Unsupported database name: " + databaseName);
